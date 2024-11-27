@@ -3,7 +3,11 @@ const mongosee = require('mongoose')
 const studentSchema = mongosee.Schema({
 
 
-    firstName: String,
+    firstName: {
+        type: Number,
+        required: true,
+        minlength: 5
+    },
     lastName: String,
     email: String,
     phone: String,
